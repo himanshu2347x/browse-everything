@@ -138,20 +138,26 @@
  </section>
 
  <!-- trusted by section  -->
-  <section class=" w-full flex items-center justify-center flex-col mt-5 ">
-    <div class="text-[#6F6F6F] text-lg mt-8 w-full ">
-Trusted by:</div>
-     <div class="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mt-6"></div>
-      <picture>
-        <!-- Large screens -->
-        <source media="(min-width: 1024px)" srcset="../assets/trustedByLargeScreen.png">
-        <!-- Medium screens -->
-        <source media="(min-width: 640px)" srcset="../assets/trustedByMediumScreen.png">
-        <!-- Small screens -->
-        <img src="../assets/trustedBySmallScreen.png" alt="Laptop" class="w-full h-auto">
-      </picture>
-    </div>
-  </section>
+<section class="w-full flex flex-col justify-center mt-5 px-4">
+  <!-- Text -->
+  <div class="text-[#6F6F6F] text-xs sm:text-lg md:text-xl font-medium mt-8 text-left w-full max-w-[1200px] mx-auto">
+    Trusted by:
+  </div>
+
+  <!-- Image Section -->
+  <div class="w-full max-w-[98%] sm:max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mt-6 flex justify-center mx-auto">
+    <picture class="w-full max-w-[1000px] sm:max-w-[1100px] md:max-w-[1200px] lg:max-w-[1300px]">
+      <!-- Large screens -->
+      <source media="(min-width: 1024px)" srcset="../assets/trustedByLargeScreen.png">
+      <!-- Medium screens -->
+      <source media="(min-width: 640px)" srcset="../assets/trustedByMediumScreen.png">
+      <!-- Small screens -->
+      <img src="../assets/trustedBySmallScreen.png" alt="Trusted by logos" class="w-full h-auto object-contain">
+    </picture>
+  </div>
+</section>
+
+
 
 </body>
 <script src="./index.js"></script>
