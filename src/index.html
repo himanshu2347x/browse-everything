@@ -88,8 +88,8 @@
     <!-- Left: Area -->
     <div class="font-medium text-2xl md:text-2xl lg:text-3xl">Area</div>
     
-    <!-- Center: List (Adjusts position for different screen sizes) -->
-    <div class="hidden min-[400px]:block absolute md:relative lg:absolute left-1/2 transform -translate-x-1/2 md:left-0 md:transform-none lg:left-1/2 lg:-translate-x-1/2">
+    <!-- Center: List (fixed on scroll). Starts neutral; JS will add blur/shadow when scrolling -->
+  <div id="centerNav" class="hidden min-[400px]:block fixed left-1/2 transform -translate-x-1/2 top-3 sm:top-4 md:top-5 lg:top-6 z-50 bg-transparent rounded-full px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-4">
       <ul class="flex gap-2 md:gap-4 lg:gap-6 list-none font-medium text-sm md:text-base lg:text-base">
         <li class="cursor-pointer hover:opacity-70">Benefits</li>
         <li class="cursor-pointer hover:opacity-70">Specifications</li>
@@ -143,7 +143,7 @@
 
 <!-- hero section  -->
  <section class="flex items-center justify-center flex-col text-center gap-4 sm:gap-5 md:gap-6 mt-12 sm:mt-16 md:mt-20 px-4">
-    <div class="font-medium text-5xl sm:text-7xl md:text-8xl lg:text-9xl">Browse everything.</div>
+    <div class="font-['Crimson_Text'] -mt-6 text-5xl font-medium sm:text-7xl md:text-8xl lg:text-9xl">Browse everything.</div>
     <div class="bg-g w-full max-w-[95%] sm:max-w-[95%] md:max-w-[98%] lg:max-w-full xl:max-w-full">
       <picture>
         <!-- Large screens -->
@@ -465,6 +465,33 @@
   </div>
  
 </section>
+
+<!-- Footer -->
+<footer class="w-full border-t border-gray-200 mt-8">
+  <div class="max-w-[1400px] mx-auto px-4 py-8">
+    <!-- Top navigation row (small, spaced) -->
+    <div class="w-full max-w-[1200px] mx-auto">
+      <ul class="flex flex-col sm:flex-row gap-4 sm:gap-8 text-black font-medium text-base">
+        <li class="cursor-default">Benefits</li>
+        <li class="cursor-default">Specifications</li>
+        <li class="cursor-default">How-to</li>
+      </ul>
+    </div>
+
+    <!-- Large empty area to match vertical spacing in design -->
+    <div class="w-full h-28 sm:h-28 md:h-36 lg:h-40"></div>
+
+    <!-- Bottom row with logo left and copyright/right text -->
+    <div class="w-full max-w-[1200px] mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <img src="../assets/walkingLogo.png" alt="Walking logo" class="w-12 h-16 object-contain">
+        <div class="text-sm text-[#485c11] font-medium">© Area. <span class="ml-2">2025</span></div>
+      </div>
+
+      <div class="text-sm text-[#485c11] font-medium">All Rights Reserved</div>
+    </div>
+  </div>
+</footer>
 
 </body>
 <script src="./index.js"></script>
