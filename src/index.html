@@ -59,6 +59,24 @@
     .mobile-menu.active {
       max-height: 500px;
     }
+    /* Comparison table: full-height vertical dividers */
+    .comparison-table { position: relative; }
+    .comparison-table::before,
+    .comparison-table::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: #e6e6e6;
+      left: 33.3333%;
+      transform: translateX(-0.5px);
+      pointer-events: none;
+    }
+    .comparison-table::after { left: 66.6666%; }
+
+    /* Prevent the pseudo-element from covering rounded corner shadow */
+    .comparison-table > .grid { position: relative; z-index: 1; }
   </style>
 </head>
 <body>
@@ -268,6 +286,128 @@
   </div>
 </section>
 
+<!-- Specs / Why Choose Area section -->
+<section class="border-t border-gray-200 mt-12">
+  <div class="max-w-[900px] mx-auto text-center px-4 py-16">
+    <div class="text-[#485c11] mb-4">Specs</div>
+    <h2 class="text-5xl md:text-6xl lg:text-7xl font-serif mb-6">Why Choose Area?</h2>
+    <p class="text-gray-600 max-w-3xl mx-auto mb-8">You need a solution that keeps up. That’s why we developed Area. A developer-friendly approach to streamline your business.</p>
+    <a href="#" class="inline-block bg-[#e7f3cf] text-black px-8 py-4 rounded-full font-medium">Discover More</a>
+  </div>
+</section>
+
+<!-- Comparison Table Section -->
+ <section class="px-4 py-16  ">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 comparison-table">
+                <!-- Header row -->
+                <div class="grid grid-cols-3 text-center py-8 px-6 border-b-2 border-gray-300">
+                    <div class="font-semibold text-xl text-black">Area</div>
+                    <div class="font-semibold text-xl text-gray-500">WebSurge</div>
+                    <div class="font-semibold text-xl text-gray-500">HyperView</div>
+                </div>
+
+                <!-- Rows -->
+                <div class="divide-y divide-gray-300">
+          <!-- Row 1 -->
+          <div class="grid grid-cols-3 items-center py-8 px-6 bg-white">
+            <div class="flex items-start gap-3 pr-6">
+                            <span class="text-gray-600 text-lg">✓</span>
+                            <span class="text-gray-800">Ultra-fast browsing</span>
+                        </div>
+            <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✓</span>
+                            <span class="text-gray-800">Fast browsing</span>
+                        </div>
+                        <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✕</span>
+                            <span class="text-gray-800">Moderate speeds</span>
+                        </div>
+                    </div>
+
+          <!-- Row 2 -->
+          <div class="grid grid-cols-3 items-center py-8 px-6 bg-white">
+            <div class="flex items-start gap-3 pr-6">
+                            <span class="text-gray-600 text-lg">✓</span>
+                            <span class="text-gray-800">Advanced AI insights</span>
+                        </div>
+            <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✓</span>
+                            <span class="text-gray-800">Basic AI recommendations</span>
+                        </div>
+                        <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✕</span>
+                            <span class="text-gray-800">No AI assistance</span>
+                        </div>
+                    </div>
+
+          <!-- Row 3 -->
+          <div class="grid grid-cols-3 items-center py-8 px-6 bg-white">
+            <div class="flex items-start gap-3 pr-6">
+                            <span class="text-gray-600 text-lg">✓</span>
+                            <span class="text-gray-800">Seamless integration</span>
+                        </div>
+            <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✓</span>
+                            <span class="text-gray-800">Restricts customization</span>
+                        </div>
+                        <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✕</span>
+                            <span class="text-gray-800">Steep learning curve</span>
+                        </div>
+                    </div>
+
+          <!-- Row 4 -->
+          <div class="grid grid-cols-3 items-center py-8 px-6 bg-white">
+            <div class="flex items-start gap-3 pr-6">
+                            <span class="text-gray-600 text-lg">✓</span>
+                            <span class="text-gray-800">Advanced AI insights</span>
+                        </div>
+            <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✕</span>
+                            <span class="text-gray-800">Basic AI insights</span>
+                        </div>
+                        <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✕</span>
+                            <span class="text-gray-800">No AI assistance</span>
+                        </div>
+                    </div>
+
+          <!-- Row 5 -->
+          <div class="grid grid-cols-3 items-center py-8 px-6 bg-white">
+            <div class="flex items-start gap-3 pr-6">
+                            <span class="text-gray-600 text-lg">✓</span>
+                            <span class="text-gray-800">Ultra-fast browsing</span>
+                        </div>
+            <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✓</span>
+                            <span class="text-gray-800">Fast browsing</span>
+                        </div>
+                        <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✕</span>
+                            <span class="text-gray-800">Moderate speeds</span>
+                        </div>
+                    </div>
+
+          <!-- Row 6 -->
+          <div class="grid grid-cols-3 items-center py-8 px-6 bg-white">
+            <div class="flex items-start gap-3 pr-6">
+                            <span class="text-gray-600 text-lg">✓</span>
+                            <span class="text-gray-800">Full UTF-8 support</span>
+                        </div>
+            <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✕</span>
+                            <span class="text-gray-800">Potential display errors</span>
+                        </div>
+                        <div class="flex items-start gap-3 px-6">
+                            <span class="text-gray-600 text-lg">✕</span>
+                            <span class="text-gray-800">Partial UTF-8 support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 <script src="./index.js"></script>
 </html>
